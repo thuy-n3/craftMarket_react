@@ -11,7 +11,7 @@ import {MktCollection,ItemModel} from './models/etsyModels.js'
 
 var AppRouter = Backbone.Router.extend({
 	routes: {
-		// 'itemListing/:listing_id':'showItemView',
+		'itemListing/:listing_id':'showItemView',
 		// 'search/:searchInput':"showSearchView",
 		"market":"showMktView",
 		'*default':'reDirectToMkt'
@@ -77,11 +77,28 @@ var AppRouter = Backbone.Router.extend({
 			}
 		}).then(function(d){
 
-			ReactDOM.render(<AppView bbMktColl={mktColl}/>, document.querySelector('.container'))
+			ReactDOM.render(<AppView bbMktColl={mktColl} currentRoute="mkt"/>, document.querySelector('.container'))
 
 		})
 
 		
+	},
+
+	showItemView: function(listing_id){
+
+		var itemMod = new ItemModel(listing_id)
+		// console.log("itemMod in showItemView in Router", itemMod)
+		itemMod.fetch({
+			dataType: 'jsonp', 
+			data: {
+				includes: 'Images,Shop',
+				api_key: itemMod._key
+			}
+		}).then(function(d){
+			console.log('fetched data', d)
+			ReactDOM.render(<AppView bbItemMod={itemMod} currentRoute="item"/>, document.querySelector('.container'))
+		})
+
 	},
 
 	initialize: function(){
@@ -90,7 +107,6 @@ var AppRouter = Backbone.Router.extend({
 	},
 
 	
-
 
 })
 

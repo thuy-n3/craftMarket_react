@@ -34,6 +34,9 @@ export var ItemModel = Backbone.Model.extend({
 	parse: function(rawJSON){
 		console.log("rawJSON results @ 0", rawJSON.results)
 		return rawJSON.results[0]
+	},
+	initialize: function(lid){
+		this.itemId = lid 
 	}
 	
 })

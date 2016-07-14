@@ -1,0 +1,38 @@
+1. make new instance of MktCollection called "mktColl" in App.js 
+
+2. passed mktcoll through bbMKtColl to AppView
+
+3. pass to MktView as mvMktColl as props in render 
+
+4. 
+
+5. for each function iterate through each element in _getMktListing
+
+6--->>>getting the models  from props of mvMktColl - passing to _getMktListing(Arr) 
+
+7. push to mktArr as result and put props on coll as mvColl=(ColElement))
+
+8.mktListing component -> is from props of mvColl 
+- this is where yo u drill down and access the data and render on the page 
+
+=============================
+
+-->export MKtView 
+-->import MktView to AppView
+-->export AppView 
+-->import AppView to app.js 
+-->export MktCollection,ItemModel 
+-->import MktCollection,ItemModel from etsyModels
+
+=============================
+
+
+app.js (parent)
+VVV
+AppView (child 1)
+VVV
+MktView (child 2)
+	- MktView born MktListing
+VVV 
+MktListing (child 3)
+	- no more passing down - 

@@ -14,7 +14,7 @@ var MktView = React.createClass({
 		var mktArr = []
 
 		collection.forEach(function(CollElement, i){
-			mktArr.push(<MktListing mvColl={CollElement}/>)
+			mktArr.push(<MktListing key={CollElement.cid} mvColl={CollElement}/>)
 		})
 		return mktArr
 
@@ -38,63 +38,25 @@ var MktListing = React.createClass({
 	render: function(){
 		return (
 			<div>
-				<div class="introBlock">
-					<div class="giantFlower">
+				<div className="mktContainer align-children">
+
+					<div className="giantFlower">
 						<img src={this.props.mvColl.get('Images')[0].url_570xN} />
 					</div>
-					<h1 class="introText">Whoever you are, find whatever you are into</h1>
-				</div>
+
+					<div className="mktDetails">
+						<p>{this.props.mvColl.get('title')}</p>
+						<p>{this.props.mvColl.get('Shop').shop_name}</p>
+						<p>{this.props.mvColl.get('price')}</p>
+
+					</div>
+
+				</div>	
 			</div>
 		)
 	}
 
-
 })
-
-
-
-
-
-	// _buildTemplate: function(modelArr){
-	// 	var htmlStr = ""
-
-	// 	htmlStr += '<div class="introBlock">'
-	// 	htmlStr += 		'<div class="giantFlower">'
-	// 	htmlStr += 			'<img src="https://s-media-cache-ak0.pinimg.com/564x/d7/d0/b0/d7d0b0652b9ad14e4da2cfc45cd7b90c.jpg" />'
-	// 	htmlStr += 		'</div>'
-	// 	htmlStr +=		'<h1 class="introText">Whoever you are, find whatever you are into</h1>'
-	// 	htmlStr += '</div>'
-	
-	// 	htmlStr += '<div class="mktContainer align-children">'
-
-	// 	for(var i=0; i<modelArr.length; i++){
-	// 		console.log("modelArr", modelArr[i])
-	// 		var mArr = modelArr[i]
-	// 		console.log("Model Arr", mArr)
-			
-	// 		htmlStr += '<div class="itemContainer " id='+mArr.get('listing_id')+'>'
-	// 		htmlStr += 		'<div class="mktImgContainer">'
-	// 		htmlStr +=			'<img class="listingImg" src="' + mArr.get('Images')[0].url_570xN + '">'
-	// 		htmlStr += 		'</div>'
-			
-	// 		htmlStr += 			'<p>' + mArr.get('title') + '</p>'
-	// 		htmlStr += 		'<div class="itemInfo">'
-	// 		htmlStr += 			'<p class="shopName">' + mArr.attributes.Shop.shop_name + '</p>'
-	// 		htmlStr += 			'<p class="price">' + "$" + mArr.get('price') + '</p>'
-	// 		htmlStr += 		'</div>'
-	// 		htmlStr += '</div>'	
-
-	// 	}
-
-	// 	htmlStr += '</div>'
-
-	// 	return htmlStr
-
-	// }, 
-
-
-
-
 
 
 

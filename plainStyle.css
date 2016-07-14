@@ -1,0 +1,221 @@
+* {
+	box-sizing: border-box;
+
+}
+
+body{
+	font-size: 0;
+	font-family: 'Guardian-egyptt','Georgia',serif;
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.align-children{
+	font-size: 0;
+}
+
+.align-children > * {
+	display: inline-block;
+	font-size: medium;
+	vertical-align: top;
+}
+
+#header{
+	max-width: 100%;
+}
+
+#container{
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.searchContainer{
+	max-width: 100%;
+} 
+
+p{ 
+	font-size: 15px;
+ }
+
+ h1 {
+ 	font-size: 20px;
+ }
+
+ a{
+ 	font-size: 20px;
+ 	margin: 1%;
+ 	text-decoration: none;
+ }
+
+{/*======Header Bar======*/}
+
+#header{
+	border: solid 3px orange;
+	padding: 3%;
+
+}
+
+.navBar{
+	font-size: 20px;
+	display: inline;
+	margin-bottom: 3%;
+}
+
+.logo{
+	height: 10%;
+	width: 10%; 
+	margin-bottom: -2%;
+}
+
+.searchContainer{s
+	border: solid 3px purple;
+	font-size: 20px;
+	padding: 1%;
+	/* background: #F5F5F1; */
+
+}
+
+.searchBox{
+	/* height: 20px; */
+	font-size: 1em;
+	display: inline-block;
+}
+
+h1 {
+	display: inline-block;
+	padding: 5%;
+}
+
+.itemInfo{
+	display: flex;
+
+}
+
+p.price{
+	flex: 2;
+	text-align: right;
+}
+
+p.shopName{
+	flex:3;
+}
+
+.material-icons{
+	font-size: 28px;
+	/* float: right; */
+}
+
+
+.introBlock {/* 
+	border: solid 2px magenta; */
+	background: #F5F5F1;
+	display: flex;
+}
+
+.giantFlower {
+	flex: 2;
+	max-width: 70%;
+	
+}
+
+h1.introText{
+	/* border: solid 2px blue ; */
+	vertical-align: top;
+	font-size: 32px;
+	flex: 1;
+	color: #FF6905;
+	margin: auto;
+
+	
+}
+
+
+
+
+{/*======Mkt Listing======*/}
+
+.mktContainer {
+	/* border: solid 2px blue; */
+	margin: auto 0;
+	margin-top: 8%;
+
+}
+
+.itemContainer{
+	/* border: solid 3px purple; */
+	margin: 1%;
+	width: 31% ;
+	padding: 1%;
+	/* height: 500px; */
+}
+
+.listingImg{
+	width: 300px;
+	height: 300px;
+	position: relative;
+	max-width: 100%;
+
+}
+
+.mktImgContainer {
+
+}
+
+
+
+
+
+{/*======Single Item Listing======*/}
+
+div#itemListing {
+ /*    border:  solid 3px green; */
+    max-width: 100%;
+    display: flex: ;
+ }
+
+
+/* @media window style */
+.onePic{
+	display: inline-block;
+	max-width: 50%;
+	height: 300px;
+}
+
+.singleItemImg{
+	width: 400px;
+	height: 400px;
+	max-width: 100%;
+	/* border: solid 3px royalblue; */
+	padding: 5%;
+	overflow: hidden;
+
+}
+
+
+.buyBox{
+	/* border: solid 3px plum; */
+	display: inline-block; 
+	width: 100%;
+	height: 400px;
+	padding: 2%;
+	max-width: 50%;
+	vertical-align: top;
+
+}
+
+
+.oneDetails {
+   /*  border: solid 3px hotpink; */
+
+}
+
+.itemDetails{
+	padding: 2%;
+}
+
+
+
+
