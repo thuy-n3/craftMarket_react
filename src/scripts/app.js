@@ -96,13 +96,14 @@ var AppRouter = Backbone.Router.extend({
 			}
 		}).then(function(d){
 			console.log('fetched data', d)
-			ReactDOM.render(<AppView bbItemMod={itemMod} currentRoute="item"/>, document.querySelector('.container'))
+			ReactDOM.render(<AppView bbItemMod={itemMod} currentRoute='item'/>, document.querySelector('.container'))
 		})
 
 	},
 
 	initialize: function(){
-		// var mktSearchView = new SearchView()
+		
+	
 		Backbone.history.start()
 	},
 

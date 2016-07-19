@@ -35,13 +35,22 @@ var MktView = React.createClass({
 
 var MktListing = React.createClass({
 
+	_navToItem: function(){
+		location.hash = '/itemListing/' + this.props.mvColl.get('listing_id')
+		
+	},
+
+
 	render: function(){
+		console.log("entire collection", this.props.mvColl)
 		return (
+
 			<div>
 				<div className="mktContainer align-children">
 
-					<div className="giantFlower">
-						<img src={this.props.mvColl.get('Images')[0].url_570xN} />
+					<div className="mktImgContainer">
+						<img className="mktImg" src={this.props.mvColl.get('Images')[0].url_570xN} onClick={this._navToItem} />
+
 					</div>
 
 					<div className="mktDetails">
@@ -57,6 +66,7 @@ var MktListing = React.createClass({
 	}
 
 })
+
 
 
 

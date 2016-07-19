@@ -3,10 +3,10 @@ import Backbone from 'backbone'
 
 Backbone.$ = $
 
-export var MktModel = Backbone.Model.extend({})
+// export var MktModel = Backbone.Model.extend({})
 
 export var MktCollection = Backbone.Collection.extend({
-	model: MktModel,
+// 	model: MktModel,
 
 	url: "https://openapi.etsy.com/v2/listings/active.js",
 	_key: "b6devysg94wdkfnin8lck4yb",
