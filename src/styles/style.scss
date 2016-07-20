@@ -4,10 +4,7 @@
 }
 
 body{
-	// font-size: 0;
-	// font-family: 'Guardian-egyptt','Georgia',serif;
-	// margin: 0;
-
+	
 	img{
 		max-width: 100%
 	}
@@ -21,9 +18,9 @@ body{
 		font-size: medium;
 		vertical-align: top;
 	}
+
+
 }
-
-
 
 
 .mktContainer{
@@ -33,3 +30,29 @@ body{
 .itemContainer{
 	border: solid 3px blue;
 }
+
+.header{
+	border: solid 3px green;
+	margin-top: 50px;
+
+	.search{
+		border: solid 3px teal;
+	}
+}
+
+
+
+.otherpicContainer{
+	border: solid 3px pink;
+
+	.otherPic{
+		display: inline-block;
+		width: 200px;
+		height: 200px;
+		border: solid 3px orange;
+	}
+
+	
+}
+
+

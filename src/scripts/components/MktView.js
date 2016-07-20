@@ -42,7 +42,7 @@ var MktListing = React.createClass({
 
 
 	render: function(){
-		console.log("entire collection", this.props.mvColl)
+		// console.log("entire collection", this.props.mvColl)
 		return (
 
 			<div>

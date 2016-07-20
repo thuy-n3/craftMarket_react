@@ -22,7 +22,6 @@ var ItemView = React.createClass({
 var ItemListing = React.createClass({
 
 
-
 	render: function(){
 		console.log('rendering from itemListing', this.props.oneItemMod)
 		return (
@@ -32,9 +31,9 @@ var ItemListing = React.createClass({
 						<img src={this.props.oneItemMod.get('Images')[0].url_570xN} />
 					</div>
 					<div className="otherpicContainer">
-						<img src={this.props.oneItemMod.get('Images')[1].url_170x135} />
-						<img src={this.props.oneItemMod.get('Images')[2].url_170x135} />
-						<img src={this.props.oneItemMod.get('Images')[3].url_170x135} />
+						<img className="otherPic" src={this.props.oneItemMod.get('Images')[1].url_570xN} />
+						<img className="otherPic" src={this.props.oneItemMod.get('Images')[2].url_570xN} />
+						<img className="otherPic" src={this.props.oneItemMod.get('Images')[3].url_570xN} />
 	
 					</div>
 					<div className="itemDetails">
